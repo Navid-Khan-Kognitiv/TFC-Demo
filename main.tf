@@ -30,4 +30,6 @@ data "azurerm_client_config" "current" {}
 resource "azurerm_resource_group" "this" {
   name     = "NCC_${var.env}"
   location = var.location
+
+  tags = local.common_tags
 }

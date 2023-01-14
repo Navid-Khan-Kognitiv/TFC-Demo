@@ -6,6 +6,8 @@ resource "azurerm_storage_account" "storage_one" {
   access_tier              = "Cool"
   account_replication_type = "LRS"
   account_kind             = "BlockBlobStorage"
+
+  tags = local.common_tags
 }
 
 resource "azurerm_storage_account" "storage_two" {
@@ -16,6 +18,8 @@ resource "azurerm_storage_account" "storage_two" {
   access_tier              = "Cool"
   account_replication_type = "LRS"
   account_kind             = "BlockBlobStorage"
+
+  tags = local.common_tags
 }
 
 resource "azurerm_storage_account" "storage_three" {
@@ -26,6 +30,8 @@ resource "azurerm_storage_account" "storage_three" {
   access_tier              = "Cool"
   account_replication_type = "LRS"
   account_kind             = "BlockBlobStorage"
+
+  tags = local.common_tags
 }
 
 
