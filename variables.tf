@@ -3,5 +3,5 @@ variable "env" {
 }
 variable "location" {
   type    = string
-  default = "Canada Central"
+  default = "East Asia"
 }

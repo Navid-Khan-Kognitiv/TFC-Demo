@@ -2,12 +2,12 @@ terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
     organization = "Kognitiv"
-    
+
     workspaces {
       prefix = "kognitiv-project-"
     }
   }
-  
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -28,10 +28,6 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "this" {
-  name     = "devops_${var.env}"
+  name     = "NCC_${var.env}"
   location = var.location
-  lifecycle {
-    prevent_destroy = true
-  }
-
 }
