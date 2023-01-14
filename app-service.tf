@@ -22,3 +22,14 @@ resource "azurerm_app_service" "example" {
     scm_type                 = "LocalGit"
   }
 }
+
+resource "azurerm_app_service_plan" "function" {
+  name                = "funcapp-plan"
+  location            = azurerm_resource_group.this.location
+  resource_group_name = azurerm_resource_group.this.name
+
+  sku {
+    tier = "Dynamic"
+    size = "Y1"
+  }
+}

@@ -13,3 +13,7 @@ variable "location" {
   type    = string
   default = "East Asia"
 }
+
+variable "prefix" {
+  default = "dfg"
+}
