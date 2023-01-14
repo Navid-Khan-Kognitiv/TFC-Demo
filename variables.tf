@@ -1,8 +1,8 @@
 locals {
   common_tags = {
     Environment = var.env
-    Billing = "dfg"
-    Program = "dfg"
+    Billing     = "dfg"
+    Program     = "dfg"
   }
 }
 
